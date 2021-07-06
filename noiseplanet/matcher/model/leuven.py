@@ -104,11 +104,11 @@ def match_leuven(graph, track):
     
     # Matching parameters
     matcher = DistanceMatcher(map_con,
-                             max_dist=200, max_dist_init=100,  # meter
+                             max_dist=400, max_dist_init=200,  # meter
                              min_prob_norm=0.001,
                              non_emitting_length_factor=0.75,
                              obs_noise=50, obs_noise_ne=75,  # meter
-                             dist_noise=50,  # meter
+                             dist_noise=100,  # meter
                              non_emitting_edgeid=False)
     edgeid, lastidx = matcher.match(path)
 
